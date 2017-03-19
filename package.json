@@ -1,0 +1,23 @@
+{
+  "name": "bookapi",
+  "version": "1.0.0",
+  "description": "Book and Author Node.js Project for CSU, Fresno's IS-183 Advanced Web Design class with Lucas Phan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souleex/NodeRestfulAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/souleex/NodeRestfulAPI/issues"
+  },
+  "homepage": "https://github.com/souleex/NodeRestfulAPI#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "gulp": "^3.9.1"
+  }
+}
