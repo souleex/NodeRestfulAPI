@@ -12,7 +12,11 @@ var port = process.env.PORT || 3000;
 var bookRouter = express.Router();
 
 bookRouter.route('/books').get(function(req,res){
-    book.find(function(err,books){
+    var query = {};
+    if (req.query.genre){
+        query.genre = req.query.genre;
+    }
+    book.find(query, function(err,books){
         if (err) {
             res.status(500).send(err);
         }else{
@@ -20,6 +24,18 @@ bookRouter.route('/books').get(function(req,res){
         }
     });
 });
+
+bookRouter.route('/books/:bookid').get(function(req,res){
+
+    book.findById(req.params.bookid, function(err,books){
+        if (err) {
+            res.status(500).send(err);
+        }else{
+            res.json(books);
+        }
+    });
+});
+
 
 app.use('/api', bookRouter);
 
