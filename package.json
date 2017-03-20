@@ -18,6 +18,7 @@
   "homepage": "https://github.com/souleex/NodeRestfulAPI#readme",
   "dependencies": {
     "express": "^4.15.2",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "mongoose": "^4.9.1"
   }
 }
