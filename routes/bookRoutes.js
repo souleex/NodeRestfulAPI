@@ -5,9 +5,9 @@ var routes = function(book) {
 
     bookRouter.route('/')
         .post(function(req, res){
-            var book = new Book(req.body);
-            book.save();
-            res.status(201).send(book);
+            var newBook = new book(req.body);
+            newBook.save();
+            res.status(201).send(newBook);
         })
         .get(function(req,res){
             var query = {};
@@ -23,7 +23,7 @@ var routes = function(book) {
             });
         });
 
-    bookRouter.route('/books/:bookid')
+    bookRouter.route('/:bookid')
         .get(function(req,res){
             book.findById(req.params.bookid, function(err,books){
                 if (err) {
