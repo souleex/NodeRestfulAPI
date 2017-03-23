@@ -1,6 +1,6 @@
-var express = require("express");
+var express = require("express"),
     mongoose = require("mongoose"),
-    bodyParser = require('body-parser');
+    bodyParser = require("body-parser");
 
 var db = mongoose.connect('mongodb://localhost/bookAPI');
 
